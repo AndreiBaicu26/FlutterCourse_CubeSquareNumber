@@ -9,8 +9,5 @@ This app will let the user know if the number inserted is a perfect square or a 
 * How to use named optional parameters
 
 ### Here is a quick demo:
-<video width="250" height="600" controls>
-  <source src="Recording.mp4" type="movie/mp4">
-Your browser does not support the video tag.
-</video>
+<img src="Recording.gif" width="250" height="600"/>
 
