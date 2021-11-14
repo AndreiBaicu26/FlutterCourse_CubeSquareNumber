@@ -10,7 +10,7 @@ This app will let the user know if the number inserted is a perfect square or a 
 
 ### Here is a quick demo:
 <video width="250" height="600" controls>
-  <source src="movie.mp4" type="Recording.mp4">
+  <source src="Recording.mp4" type="movie/mp4">
 Your browser does not support the video tag.
 </video>
 
