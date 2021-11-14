@@ -9,4 +9,4 @@ This app will let the user know if the number inserted is a perfect square or a 
 * How to use named optional parameters
 
 ### Here is a quick demo:
-<img src="Recording.gif" width="250" height="600"/>
+<img src="Recording.mp4" width="250" height="600"/>
