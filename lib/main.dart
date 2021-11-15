@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           );
-        }).then((value) => controller.clear());
+        }).then((dynamic value) => controller.clear());
   }
 
   @override
