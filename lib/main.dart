@@ -68,7 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
     int? cubeNumber = 1;
     while (i < value) {
       cubeNumber = pow(i, 3) as int?;
-      if (cubeNumber == value) return true;
+      if (cubeNumber == value) {
+        return true;
+      }
       i = i + 1;
     }
 
