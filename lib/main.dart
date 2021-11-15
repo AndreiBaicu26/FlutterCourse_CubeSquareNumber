@@ -29,14 +29,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController controller = TextEditingController();
+  final TextEditingController controller = TextEditingController();
 
   void processNumber() {
-    int? inputValue = int.tryParse(controller.text);
+    final int? inputValue = int.tryParse(controller.text);
     bool isCube = false;
     bool isSquare = false;
 
-    if (inputValue == null) return;
+    if (inputValue == null) {
+      return;
+    }
 
     if (valueIsSquare(inputValue)) {
       isSquare = true;
@@ -74,25 +76,25 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void openDialog(int value, {bool isSquare = false, bool isCube = false}) {
-    String textToShow = "";
+    String textToShow = '';
 
     if (isSquare && isCube) {
-      textToShow = "Number $value is both SQUARE and CUBE.";
+      textToShow = 'Number $value is both SQUARE and CUBE.';
     } else if (isSquare) {
-      textToShow = "Number $value is a perfect SQUARE.";
+      textToShow = 'Number $value is a perfect SQUARE.';
     } else if (isCube) {
-      textToShow = "Number $value is a CUBE.";
+      textToShow = 'Number $value is a CUBE.';
     } else {
-      textToShow = "Number $value is neither SQUARE neither CUBE.";
+      textToShow = 'Number $value is neither SQUARE neither CUBE.';
     }
 
-    showDialog(
+    showDialog<void>(
         context: context,
         builder: (BuildContext context) {
           return SimpleDialog(
             contentPadding: const EdgeInsets.all(20.0),
             title: Text('$value'),
-            children: [
+            children: <Widget>[
               Text(
                 textToShow,
               ),
@@ -107,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: const Text("Number shapes"),
+        title: const Text('Number shapes'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(9.0),
@@ -127,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: processNumber,
+        onPressed: () => processNumber,
         tooltip: 'Increment',
         child: const Icon(Icons.done),
       ),
